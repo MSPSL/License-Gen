@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "orders",
+      "connection": "mysoftlicensestorage_STORAGE"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "licenses/{rand-guid}.lic",
+      "connection": "mysoftlicensestorage_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
